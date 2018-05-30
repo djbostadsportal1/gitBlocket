@@ -12,16 +12,16 @@ import time
 import re
 import Blocket_module as bm
 
-class Blocket(scrapy.Spider):
+class BlocketAlvsborg(scrapy.Spider):
 
     #Name of scraper
-    name = 'Blocket'
+    name = 'BlocketAlvsborg'
 
     #Start page you start scraping from
-    start_urls = ['https://www.blocket.se/bostad/uthyres?cg_multi=3020&sort=&ss=&se=&ros=&roe=&bs=&be=&mre=&q=&q=&q=&is=1&save_search=1&l=0&md=th&f=p&f=c&f=b&ca=11&w=3']
+    start_urls = ['https://www.blocket.se/bostad/uthyres/lagenheter/alvsborg']
 
     #The domain you are allowed to scrape on
-    allowed_domains = ['']
+    allowed_domains = ['https://www.blocket.se/bostad/']
 
     #Scraping the first page
     def parse(self, response):
